@@ -3,11 +3,13 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.github.tomykaira</groupId>
-  <artifactId>auctionsniper</artifactId>
+  <artifactId>auctionSniper</artifactId>
   <version>1.0</version>
   <packaging>jar</packaging>
   <build>
     <finalName>${project.artifactId}</finalName>
+    <sourceDirectory>src</sourceDirectory>
+    <testSourceDirectory>test</testSourceDirectory>
     <plugins>
         <plugin>
             <groupId>org.codehaus.mojo</groupId>
@@ -21,7 +23,7 @@
                 </execution>
             </executions>
             <configuration>
-                <mainClass>com.github.tomykaira.Main</mainClass>
+                <mainClass>auctionsniper.Main</mainClass>
                 <arguments>
                     <argument>arg1</argument>
                     <argument>arg2</argument>
@@ -34,7 +36,7 @@
             <configuration>
                 <archive>
                     <manifest>
-                        <mainClass>com.github.tomykaira.Main</mainClass>
+                        <mainClass>auctionsniper.Main</mainClass>
                     </manifest>
                 </archive>
             </configuration>
@@ -146,6 +148,16 @@
     	<artifactId>smackx</artifactId>
     	<version>3.1.0</version>
     	<scope>test</scope>
+    </dependency>
+    <dependency>
+    	<groupId>org.slf4j</groupId>
+    	<artifactId>slf4j-api</artifactId>
+    	<version>1.6.4</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.slf4j</groupId>
+    	<artifactId>slf4j-log4j12</artifactId>
+    	<version>1.6.4</version>
     </dependency>
   </dependencies>
   <name>goos auction sniper examples</name>
