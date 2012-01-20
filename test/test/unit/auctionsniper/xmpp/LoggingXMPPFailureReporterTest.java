@@ -29,7 +29,7 @@ public class LoggingXMPPFailureReporterTest {
 	@Test public void
 	writesMessageTranslationFailureToLog() {
 		context.checking(new Expectations() {{
-			oneOf(logger).severe("<auction id> "+
+			one(logger).severe("<auction id> "+
 					"Could not translate message \"bad message\" "+
 					"because \"java.lang.Exception: bad\"");
 		}});
