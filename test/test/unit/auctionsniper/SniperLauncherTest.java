@@ -36,7 +36,7 @@ public class SniperLauncherTest {
 				when(auctionState.is("not joined"));
 			oneOf(collector).addSniper(with(sniperForItem(item.identifier)));
 				when(auctionState.is("not joined"));
-			one(auction).join();
+			oneOf(auction).join();
 				then(auctionState.is("joined"));
 		}});
 

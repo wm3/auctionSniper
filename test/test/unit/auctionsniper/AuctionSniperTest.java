@@ -38,7 +38,7 @@ public class AuctionSniperTest {
 	@Test public void
 	reportsLostWhenAuctionClosedImmediately() {
 		context.checking(new Expectations() {{
-			one(sniperListener).sniperStateChanged(with(aSniperThatIs(LOST)));
+			oneOf(sniperListener).sniperStateChanged(with(aSniperThatIs(LOST)));
 		}});
 
 		sniper.auctionClosed();
@@ -78,7 +78,7 @@ public class AuctionSniperTest {
 		final int increment = 25;
 		final int bid = price + increment;
 		context.checking(new Expectations() {{
-			one(auction).bid(bid);
+			oneOf(auction).bid(bid);
 			atLeast(1).of(sniperListener).sniperStateChanged(new SniperSnapshot(ITEM_ID, price, bid, BIDDING));
 		}});
 

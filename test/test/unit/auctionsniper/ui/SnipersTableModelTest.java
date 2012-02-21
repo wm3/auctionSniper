@@ -47,7 +47,7 @@ public class SnipersTableModelTest {
 		SniperSnapshot bidding = sniper.getSnapshot().bidding(555, 666);
 		context.checking(new Expectations() {{
 			allowing(listener).tableChanged(with(anyInsertionEvent()));
-			one(listener).tableChanged(with(aChangeInRow(0)));
+			oneOf(listener).tableChanged(with(aChangeInRow(0)));
 		}});
 
 		model.sniperAdded(sniper);
@@ -60,7 +60,7 @@ public class SnipersTableModelTest {
 	notifiesListenersWhenAddingASniper() {
 		AuctionSniper sniper = new AuctionSniper(new Item("item233", 1000), auction);
 		context.checking(new Expectations() {{
-			one(listener).tableChanged(with(anInsertionAtRow(0)));
+			oneOf(listener).tableChanged(with(anInsertionAtRow(0)));
 		}});
 
 		assertEquals(0, model.getRowCount());

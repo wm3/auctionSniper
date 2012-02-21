@@ -17,6 +17,7 @@ import com.objogate.wl.swing.driver.JTableHeaderDriver;
 import com.objogate.wl.swing.driver.JTextFieldDriver;
 import com.objogate.wl.swing.gesture.GesturePerformer;
 
+@SuppressWarnings("unchecked")
 public class AuctionSniperDriver extends JFrameDriver {
 	public AuctionSniperDriver(int timeoutMillis) {
 		super(new GesturePerformer(),
