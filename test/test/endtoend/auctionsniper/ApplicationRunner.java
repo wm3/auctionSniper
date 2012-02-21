@@ -1,7 +1,8 @@
 package test.endtoend.auctionsniper;
 
-import static org.hamcrest.CoreMatchers.*;
+
 import static org.junit.Assert.*;
+import static org.junit.matchers.JUnitMatchers.*;
 import static test.endtoend.auctionsniper.FakeAuctionServer.*;
 
 import java.io.File;
