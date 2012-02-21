@@ -14,6 +14,8 @@ import auctionsniper.SniperState;
 import com.objogate.exception.Defect;
 
 public class SnipersTableModel extends AbstractTableModel implements SniperListener, PortfolioListener {
+	private static final long serialVersionUID = 1L;
+
 	private List<SniperSnapshot> snapshots;
 
 	private List<AuctionSniper>	notToBeGCd;
